@@ -1,4 +1,5 @@
 ^\.git
+^\.travis.yml
 ^[^/]+\.pl$
 ^\ignore.txt
 ^_build
