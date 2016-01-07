@@ -1,4 +1,7 @@
 Revision history for Net-TinyERP
 
+0.02    2016-01-07
+    - Removed unused debug code.
+
 0.01    2016-01-07
-    Initial release.
+    - Initial release.

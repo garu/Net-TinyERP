@@ -5,7 +5,6 @@ use IO::Socket::SSL;
 use Scalar::Util ();
 use Furl;
 use JSON::MaybeXS qw( decode_json encode_json );
-use DDP caller_info => 1;
 
 sub new {
     my ($class, $parent) = @_;
@@ -29,7 +28,6 @@ sub _post {
         formato => 'json',
         %$params,
     });
-    p($res);
 
     if ($res->is_success) {
         my $content = decode_json($res->decoded_content);
