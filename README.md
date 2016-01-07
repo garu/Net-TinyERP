@@ -38,12 +38,12 @@ como produtos, vendedores e crm, envie-nos um Pull Request :)
 
 * Uma conta na TinyERP com acesso à API
 
-Acesse L<http://www.tiny.com.br> e crie sua conta em um plano que
+Acesse http://www.tiny.com.br e crie sua conta em um plano que
 tenha suporte à API.
 
 * Um token de acesso à API
 
-Veja L<Como gerar seu token|https://tiny.com.br/info/api.php?p=api2-gerar-token-api>.
+Veja [Como gerar seu token](https://tiny.com.br/info/api.php?p=api2-gerar-token-api).
 
 * Um certificado digital A1
 
