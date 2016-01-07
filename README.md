@@ -5,14 +5,14 @@ Este módulo interage com a API (2.0) do [TinyERP](http://tiny.com.br).
 
 #### Don't speak portuguese?
 
-This module provides an interface to talk to Tiny ERP's REST API.
+*This module provides an interface to talk to Tiny ERP's REST API.
 Tiny ERP is a brazilian Enterprise Resource Planning company with
 several solutions for CRM, contracts, products, tax invoices, etc,
 focused on brazilian small and medium-sized businesses.
 Since the target audience for this distribution is mainly brazilian
 developers, the documentation is provided in portuguese only.
 If you need any help or want to translate it to your language, please
-send us some pull requests! :)
+send us some pull requests! :)*
 
 
 No momento, apenas a API de notas fiscais foi implementada. Se quiser
