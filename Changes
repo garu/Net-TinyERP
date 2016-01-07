@@ -1,5 +1,8 @@
 Revision history for Net-TinyERP
 
+0.03    2016-01-07
+    - fixed pod encoding errors.
+
 0.02    2016-01-07
     - Removed unused debug code.
 
