@@ -9,7 +9,7 @@ use Net::TinyERP;
     no warnings 'redefine';
     *Net::TinyERP::NotaFiscal::_post = sub {
         my ($self, $url, $params) = @_;
-        like $url, qr{https://tiny.com.br/api2/.+\.php}, 'route match';
+        like $url, qr{https://api.tiny.com.br/api2/.+\.php}, 'route match';
         is ref($params), 'HASH', 'params look like a hashref';
         return 1;
     };

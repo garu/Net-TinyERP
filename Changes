@@ -1,5 +1,8 @@
 Revision history for Net-TinyERP
 
+0.04    2016-03-11
+    - updated API routes to api.tiny.com.br
+
 0.03    2016-01-07
     - fixed pod encoding errors.
 

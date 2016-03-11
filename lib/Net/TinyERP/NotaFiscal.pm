@@ -43,7 +43,7 @@ sub pesquisar {
     die 'pesquisar() precisa de HASHREF como argumento'
         unless $params and ref $params and ref $params eq 'HASH';
 
-    return $self->_post('https://tiny.com.br/api2/notas.fiscais.pesquisa.php', $params);
+    return $self->_post('https://api.tiny.com.br/api2/notas.fiscais.pesquisa.php', $params);
 }
 
 sub obter {
@@ -51,7 +51,7 @@ sub obter {
     die 'obter() precisa de argumento "id" numérico'
         unless $id && $id =~ /^\d+$/;
 
-    return $self->_post('https://tiny.com.br/api2/nota.fiscal.obter.php', {
+    return $self->_post('https://api.tiny.com.br/api2/nota.fiscal.obter.php', {
         id => $id,
     });
 }
@@ -65,7 +65,7 @@ sub obter_link {
     die 'obter_link() precisa de argumento "id" numérico'
         unless $id && $id =~ /^\d+$/;
 
-    return $self->_post( 'https://tiny.com.br/api2/nota.fiscal.obter.link.php', {
+    return $self->_post( 'https://api.tiny.com.br/api2/nota.fiscal.obter.link.php', {
         id => $id,
     });
 }
@@ -75,7 +75,7 @@ sub incluir {
     die 'incluir() precisa de HASHREF como argumento'
         unless $params and ref $params and ref $params eq 'HASH';
 
-    return $self->_post( 'https://tiny.com.br/api2/nota.fiscal.incluir.php', {
+    return $self->_post( 'https://api.tiny.com.br/api2/nota.fiscal.incluir.php', {
         nota => encode_json({ nota_fiscal => $params }),
     });
 }
@@ -85,7 +85,7 @@ sub emitir {
     die 'emitir() precisa de argumento "id" numérico'
         unless $id && $id =~ /^\d+$/;
 
-    return $self->_post( 'https://tiny.com.br/api2/nota.fiscal.emitir.php', {
+    return $self->_post( 'https://api.tiny.com.br/api2/nota.fiscal.emitir.php', {
         id => $id,
     });
 }
