@@ -81,13 +81,24 @@ sub incluir {
 }
 
 sub emitir {
-    my ($self, $id) = @_;
-    die 'emitir() precisa de argumento "id" numérico'
-        unless $id && $id =~ /^\d+$/;
+    my ($self, $params) = @_;
+    if (ref $params) {
+        die 'emitir() precisa de id ou serie/numero da nota'
+            unless (
+                  ($params->{id} && $params->{id} =~ /\A\d+\z/)
+               || ($params->{serie} && $params->{numero})
+           );
+    }
+    else {
+        my $id = $params;
+        die 'emitir() precisa de pelo menos um argumento "id" numérico'
+            unless $id && $id =~ /^\d+$/;
+        $params = { id => $id };
+    }
 
-    return $self->_post( 'https://api.tiny.com.br/api2/nota.fiscal.emitir.php', {
-        id => $id,
-    });
+    return $self->_post( 'https://api.tiny.com.br/api2/nota.fiscal.emitir.php',
+        $params
+    );
 }
 
 1;
@@ -155,9 +166,12 @@ L<< documentação do 'obter link' na API|https://tiny.com.br/help?p=api2-notas-
 
 =head2 emitir( $id )
 
+=head2 emitir( \%params )
+
 Envia a Nota Fiscal selecionada à SEFAZ associada, criando uma NFe
 com valor fiscal.
 
+    # equivalente a $tiny->nota_fiscal->emitir({ id => '354040217' });
     my $res = $tiny->nota_fiscal->emitir( '354040217' );
 
     if ($res->{status} eq 'OK') {

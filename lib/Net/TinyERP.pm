@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use Net::TinyERP::NotaFiscal;
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 sub new {
     my ($class, @params) = @_;

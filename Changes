@@ -1,5 +1,8 @@
 Revision history for Net-TinyERP
 
+0.05    2016-04-12
+    - emitir() also accepts parameters
+
 0.04    2016-03-11
     - updated API routes to api.tiny.com.br
 
