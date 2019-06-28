@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use Net::TinyERP::NotaFiscal;
 
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 
 sub new {
     my ($class, @params) = @_;
@@ -127,7 +127,7 @@ L<Net::TinyERP::NotaFiscalServicos>.
 
 =head1 COPYRIGHT e LICENÇA
 
-Copyright (c) 2016 - Breno G. de Oliveira C<< garu at cpan.org >>.
+Copyright (c) 2016-2019 - Breno G. de Oliveira C<< garu at cpan.org >>.
 Todos os direitos reservados.
 
 Este módulo é software livre; você pode redistribuí-lo e/ou modificá-lo sob os mesmos
@@ -139,4 +139,3 @@ PORQUE ESTE SOFTWARE É LICENCIADO LIVRE DE QUALQUER CUSTO, NÃO HÁ GARANTIA AL
 PARA ELE EM TODA A EXTENSÃO PERMITIDA PELA LEI. ESTE SOFTWARE É OFERECIDO "COMO ESTÁ"
 SEM QUALQUER GARANTIA DE QUALQUER TIPO, EXPRESSA OU IMPLÍCITA. TODO O RISCO RELACIONADO
 À QUALIDADE, DESEMPENHO E COMPORTAMENTO DESTE SOFTWARE É DE QUEM O UTILIZAR.
-
