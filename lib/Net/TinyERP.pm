@@ -24,6 +24,14 @@ sub nota_fiscal {
     return $self->{_nf_obj};
 }
 
+sub nota_servicos {
+    my ($self) = @_;
+    if (!exists $self->{_nfs_obj}) {
+        $self->{_nfs_obj} = Net::TinyERP::NotaFiscalServicos->new($self);
+    }
+    return $self->{_nfs_obj};
+}
+
 1;
 __END__
 =encoding utf8
@@ -110,6 +118,12 @@ No momento apenas a API de manipulação de Notas Fiscais está disponível.
 Retorna o objeto para manipulação de Notas Fiscais Eletrônicas (NFe).
 Para mais informações, consulte a documentação da classe
 L<Net::TinyERP::NotaFiscal>.
+
+=head2 nota_servicos()
+
+Retorna o objeto para manipulação de Notas Fiscais de Serviço Eletrônicas
+(NFSe). Para mais informações, consulte a documentação da classe
+L<Net::TinyERP::NotaFiscalServicos>.
 
 =head1 COPYRIGHT e LICENÇA
 
