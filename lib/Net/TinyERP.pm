@@ -2,6 +2,7 @@ package Net::TinyERP;
 use strict;
 use warnings;
 use Net::TinyERP::NotaFiscal;
+use Net::TinyERP::NotaFiscalServicos;
 
 our $VERSION = '0.06';
 
