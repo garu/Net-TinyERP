@@ -43,7 +43,7 @@ tenha suporte à API.
 
 * Um token de acesso à API
 
-Veja [Como gerar seu token](https://tiny.com.br/info/api.php?p=api2-gerar-token-api).
+Veja [Como gerar seu token](https://www.tiny.com.br/ajuda/api/api2-gerar-token-api).
 
 * Um certificado digital A1
 
