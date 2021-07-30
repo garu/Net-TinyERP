@@ -38,37 +38,30 @@ sub _post {
     }
 }
 
-# FIXME
 sub pesquisar {
     my ($self, $params) = @_;
     die 'pesquisar() precisa de HASHREF como argumento'
         unless $params and ref $params and ref $params eq 'HASH';
 
-    return $self->_post('https://api.tiny.com.br/api2/notas.fiscais.pesquisa.php', $params);
+    return $self->_post('https://api.tiny.com.br/api2/notas.servico.pesquisa.php', $params);
 }
 
-# FIXME
 sub obter {
     my ($self, $id) = @_;
     die 'obter() precisa de argumento "id" numérico'
         unless $id && $id =~ /^\d+$/;
 
-    return $self->_post('https://api.tiny.com.br/api2/nota.fiscal.obter.php', {
+    return $self->_post('https://api.tiny.com.br/api2/nota.servico.obter.php', {
         id => $id,
     });
 }
 
-sub obter_xml {
-    die 'obter_xml() nao foi implementado';
-}
-
-# FIXME:
-sub obter_link {
+sub consultar {
     my ($self, $id) = @_;
-    die 'obter_link() precisa de argumento "id" numérico'
+    die 'obter() precisa de argumento "id" numérico'
         unless $id && $id =~ /^\d+$/;
 
-    return $self->_post( 'https://api.tiny.com.br/api2/nota.fiscal.obter.link.php', {
+    return $self->_post('https://api.tiny.com.br/api2/nota.servico.consultar.php', {
         id => $id,
     });
 }
